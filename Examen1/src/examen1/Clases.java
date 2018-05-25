@@ -12,6 +12,7 @@ import java.util.ArrayList;
  * @author X
  */
 public class Clases {
+    ArrayList <Atributos> atri=new ArrayList();
     ArrayList<Metodos> metodos=new ArrayList();
     private String nombre;
 
@@ -36,6 +37,14 @@ public class Clases {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public ArrayList<Atributos> getAtri() {
+        return atri;
+    }
+
+    public void setAtri(ArrayList<Atributos> atri) {
+        this.atri = atri;
     }
     
     

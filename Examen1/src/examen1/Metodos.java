@@ -5,11 +5,14 @@
  */
 package examen1;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author X
  */
 public class Metodos {
+    private ArrayList<Atributos> atris=new ArrayList();
     private String Atributo1;
     private String M_nombre;
 
@@ -42,6 +45,19 @@ public class Metodos {
 
     public void setAtributo1(String Atributo1) {
         this.Atributo1 = Atributo1;
+    }
+
+    @Override
+    public String toString() {
+        return M_nombre+",";
+    }
+
+    public ArrayList<Atributos> getAtris() {
+        return atris;
+    }
+
+    public void setAtris(ArrayList<Atributos> atris) {
+        this.atris = atris;
     }
     
     
