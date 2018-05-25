@@ -20,7 +20,7 @@ public class Usuario {
      */
     private String nombre;
     private String contraseña;
-    private int numero;
+    private String numero;
     private String correo;
     private String usuario;
     private ArrayList<Clases> clases = new ArrayList();
@@ -29,7 +29,7 @@ public class Usuario {
         
     }
 
-    public Usuario(String nombre, String contraseña, int numero, String correo, String usuario) {
+    public Usuario(String nombre, String contraseña, String numero, String correo, String usuario) {
         this.nombre = nombre;
         this.contraseña = contraseña;
         this.numero = numero;
@@ -53,11 +53,11 @@ public class Usuario {
         this.contraseña = contraseña;
     }
 
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 

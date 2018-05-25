@@ -5,14 +5,10 @@
  */
 package examen1;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author X
  */
-public class Clases {
-    ArrayList<Metodos> metodos=new ArrayList();
-    
+public class Metodos {
     
 }
