@@ -209,10 +209,11 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         jTextArea1.setRows(5);
-        jTextArea1.setText("CC.\"NOMBRE DE LA CLASE\"\n***//CREA UNA CLASE//***\nEJEMPLO CC.perro \n\nCM.\"NOMBRE DEL METODO\"().\"NOMBRE DE LA CLASE\"\n***//CREA UN METODO EN UNA CLASE//**\nEJEMPLO CM.eat().perro\n\nCA.\"TIPO DE ATRIBUTO\"_\"NOMBRE DE LA VARIABLE\".\"CLASE\".\"METODO\"()\n***//CREA UN ATRIBUTO EN UN METODO//**\nEJEMPLO CM.int_x.perro.eat()\n\nMM.\"METODO\"().\"CLASE\".\"NUEVO NOMBRE DEL METODO\"\n***//CAMBIA UN METODO EN UNA CLASE//**\nEJEMPLO MM.eat().perro.dormir() == dormir().perro\n\nBM.\"METODO\"().\"CLASE\".\"Mensaje o Cuerpo\"\n***//AGREGA CUERPO AL METODO\nEJEMPLO MM.eat().perro.\"int x,y, return x*y;\"\n");
+        jTextArea1.setText("CC/\"NOMBRE DE LA CLASE\"\n***//CREA UNA CLASE//***\nEJEMPLO                   CC.perro \n\nCM/\"NOMBRE DEL METODO\"()/\"NOMBRE DE LA CLASE\"\n***//CREA UN METODO EN UNA CLASE//**\nEJEMPLO                  CM/eat()/perro\n\nCA/\"TIPO DE ATRIBUTO\"_\"NOMBRE DE LA VARIABLE\"/\"CLASE\"/\"METODO\"()\n***//CREA UN ATRIBUTO EN UN METODO//**\nEJEMPLO                   CM/int_x/perro.eat()\n\nMM/\"METODO\"()/\"CLASE\"/\"NUEVO NOMBRE DEL METODO\"\n***//CAMBIA UN METODO EN UNA CLASE//**\nEJEMPLO                   MM/eat()/perro/dormir() == dormir()/perro\n\nAM/\"METODO\"()/\"CLASE\"/\"Mensaje o Cuerpo\"\n***//AGREGA CUERPO AL METODO\nEJEMPLO                   AM/eat()/perro/\"int x,y, return x*y;\"\n\nNC/\"Nombre de la Clase\" ***//Crea el Constructor de una clase//***\nNC/perro\n\nTT/\"Nombre de la Clase\" ***//Crea El to String de la CLase//***\n\n\nBM.\"METODO\"().\"CLASE\" **+//BORRA EL METODO DE LA CLASE//***\n\n\n\n\n");
         jScrollPane2.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -236,9 +237,9 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40)
+                .addGap(29, 29, 29)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 402, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(22, 22, 22))
         );
 
         jTabbedPane1.addTab("Ejecutar", jPanel3);
@@ -325,6 +326,7 @@ public class Principal extends javax.swing.JFrame {
 
     private void Iniciar_SMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Iniciar_SMouseClicked
         // TODO add your handling code here:
+        int cont = 0;
         String contraseña = r_con.getText();
         String usuario = r_us.getText();
         for (Usuario u : us) {
@@ -338,9 +340,12 @@ public class Principal extends javax.swing.JFrame {
                 p_correo.setText(actual.getCorreo());
                 p_numero.setText(actual.getNumero());
                 p_con.setText(actual.getContraseña());
+                ac = cont;
+                System.out.println(ac + "LIsta Ubicacion");
             } else {
                 JOptionPane.showMessageDialog(this, "Usuario No Encontrado");
             }
+            cont++;
         }
 
 
@@ -390,7 +395,56 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_Iniciar_SActionPerformed
 
     private void jToggleButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jToggleButton2MouseClicked
-        // TODO add your handling code here:
+        String texto = t_area.getText();
+        String[] partes = texto.split("/");
+        System.out.println(partes[0]);
+        try {
+            if (partes[0].equals("CC")) {
+                us.get(ac).getClases().add(new Clases(partes[1]));
+            } else if (partes[0].equals("CM")) {
+                System.out.println(partes[2]);
+                for (int i = 0; i < us.get(ac).getClases().size(); i++) {
+                    if (us.get(ac).getClases().get(i).getNombre().equals(partes[2])) {
+                        us.get(ac).getClases().get(i).getMetodos().add(new Metodos(partes[1]));
+                    }
+                }
+
+            } else if (partes[0].equals("CA")) {
+                for (int i = 0; i < us.get(ac).getClases().size(); i++) {
+                    if (us.get(ac).getClases().get(i).getNombre().equals(partes[3])) {
+                        for (int j = 0; j < us.get(ac).getClases().get(i).getMetodos().size(); j++) {
+                            if (us.get(ac).getClases().get(i).getMetodos().get(j).getM_nombre().equals(partes[2])) {
+                                System.out.println("SIMONNNNNNNNNN");
+                                us.get(ac).getClases().get(i).getMetodos().get(j).setAtributo1(partes[1]);
+                            }
+                            //  CM/int_x/eat()/perro
+                        }
+                    }
+                }
+
+            } else if (partes[0].equals("BM")) {
+              //"METODO"()/"CLASE
+               for (int i = 0; i < us.get(ac).getClases().size(); i++) {
+                    if (us.get(ac).getClases().get(i).getNombre().equals(partes[3])) {
+                        for (int j = 0; j < us.get(ac).getClases().get(i).getMetodos().size(); j++) {
+                            if (us.get(ac).getClases().get(i).getMetodos().get(j).getM_nombre().equals(partes[2])) {
+                              us.get(ac).getClases().get(i).getMetodos().remove(j);
+                            }
+                            //  CM/int_x/eat()/perro
+                        }
+                    }
+                }
+              
+            } else if (partes[0].equals(" ")) {
+
+            } else if (partes[0].equals(" ")) {
+
+            } else if (partes[0].equals(" ")) {
+
+            }
+        } catch (Exception e) {
+            System.out.println("FATAL ERROR");
+        }
     }//GEN-LAST:event_jToggleButton2MouseClicked
 
     /**
@@ -470,5 +524,6 @@ public class Principal extends javax.swing.JFrame {
 
     ArrayList<Usuario> us = new ArrayList();
     Usuario actual = new Usuario();
+    int ac = 0;
 
 }

@@ -10,5 +10,39 @@ package examen1;
  * @author X
  */
 public class Metodos {
+    private String Atributo1;
+    private String M_nombre;
+
+    public Metodos() {
+    }
+
+    public Metodos(String M_nombre) {
+        this.M_nombre = M_nombre;
+    }
+
+    public String getM_nombre() {
+        return M_nombre;
+    }
+
+    public void setM_nombre(String M_nombre) {
+        this.M_nombre = M_nombre;
+    }
+
+   
+
+    public Metodos(String Atributo1, String M_nombre) {
+        this.Atributo1 = Atributo1;
+        this.M_nombre = M_nombre;
+    }
+    
+
+    public String getAtributo1() {
+        return Atributo1;
+    }
+
+    public void setAtributo1(String Atributo1) {
+        this.Atributo1 = Atributo1;
+    }
+    
     
 }
