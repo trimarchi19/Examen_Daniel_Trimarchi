@@ -75,6 +75,7 @@ public class Principal extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         r_us = new javax.swing.JTextField();
         r_con = new javax.swing.JPasswordField();
+        jLabel11 = new javax.swing.JLabel();
 
         jd_registrar.getContentPane().setLayout(null);
 
@@ -340,6 +341,17 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        r_us.setText("admin");
+
+        r_con.setText("admin");
+        r_con.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                r_conActionPerformed(evt);
+            }
+        });
+
+        jLabel11.setText("admin");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -359,7 +371,9 @@ public class Principal extends javax.swing.JFrame {
                             .addComponent(Iniciar_S)
                             .addComponent(r_con)
                             .addComponent(r_us, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE))
-                        .addGap(0, 67, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel11)
+                        .addGap(0, 35, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -372,7 +386,8 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(38, 38, 38)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(r_con, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(r_con, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel11))
                 .addGap(36, 36, 36)
                 .addComponent(Iniciar_S)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
@@ -608,6 +623,10 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_actualizarActionPerformed
 
+    private void r_conActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_r_conActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_r_conActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -655,6 +674,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
