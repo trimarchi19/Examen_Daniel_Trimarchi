@@ -326,7 +326,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="jScrollPane2" min="-2" pref="560" max="-2" attributes="0"/>
                               <Group type="102" attributes="0">
                                   <Component id="jScrollPane1" min="-2" pref="440" max="-2" attributes="0"/>
@@ -346,9 +346,9 @@
                               <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
                               <Component id="jToggleButton2" min="-2" pref="39" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                          <Component id="jScrollPane2" pref="402" max="32767" attributes="0"/>
-                          <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="jScrollPane2" pref="379" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -393,7 +393,7 @@
                           <Font name="Calibri" size="12" style="0"/>
                         </Property>
                         <Property name="rows" type="int" value="5"/>
-                        <Property name="text" type="java.lang.String" value="CC/&quot;NOMBRE DE LA CLASE&quot;&#xa;***//CREA UNA CLASE//***&#xa;EJEMPLO                   CC.perro &#xa;&#xa;CM/&quot;NOMBRE DEL METODO&quot;()/&quot;NOMBRE DE LA CLASE&quot;&#xa;***//CREA UN METODO EN UNA CLASE//**&#xa;EJEMPLO                  CM/eat()/perro&#xa;&#xa;CA/&quot;TIPO DE ATRIBUTO&quot;_&quot;NOMBRE DE LA VARIABLE&quot;/&quot;CLASE&quot;/&quot;METODO&quot;()&#xa;***//CREA UN ATRIBUTO EN UN METODO//**&#xa;EJEMPLO                   CM/int_x/perro.eat()&#xa;&#xa;MM/&quot;METODO&quot;()/&quot;CLASE&quot;/&quot;NUEVO NOMBRE DEL METODO&quot;&#xa;***//CAMBIA UN METODO EN UNA CLASE//**&#xa;EJEMPLO                   MM/eat()/perro/dormir() == dormir()/perro&#xa;&#xa;AM/&quot;METODO&quot;()/&quot;CLASE&quot;/&quot;Mensaje o Cuerpo&quot;&#xa;***//AGREGA CUERPO AL METODO&#xa;EJEMPLO                   AM/eat()/perro/&quot;int x,y, return x*y;&quot;&#xa;&#xa;NC/&quot;Nombre de la Clase&quot; ***//Crea el Constructor de una clase//***&#xa;NC/perro&#xa;&#xa;TT/&quot;Nombre de la Clase&quot; ***//Crea El to String de la CLase//***&#xa;&#xa;&#xa;BM/&quot;METODO&quot;().&quot;CLASE&quot; **+//BORRA EL METODO DE LA CLASE//***&#xa;&#xa;VC/&quot;nombre de la variable&quot;/clase&#xa;EJEMPLO  VC/INT_X/perro&#xa;&#xa;&#xa;"/>
+                        <Property name="text" type="java.lang.String" value="CC/&quot;NOMBRE DE LA CLASE&quot;&#xa;***//CREA UNA CLASE//***&#xa;EJEMPLO                   CC.perro &#xa;&#xa;CM/&quot;NOMBRE DEL METODO&quot;()/&quot;NOMBRE DE LA CLASE&quot;&#xa;***//CREA UN METODO EN UNA CLASE//**&#xa;EJEMPLO                  CM/eat()/perro&#xa;&#xa;CA/&quot;TIPO DE ATRIBUTO&quot;_&quot;NOMBRE DE LA VARIABLE&quot;/&quot;CLASE&quot;/&quot;METODO&quot;()&#xa;***//CREA UN ATRIBUTO EN UN METODO//**&#xa;EJEMPLO                   CM/int_x/eat()/perro&#xa;&#xa;MM/&quot;METODO&quot;()/&quot;CLASE&quot;/&quot;NUEVO NOMBRE DEL METODO&quot;&#xa;***//CAMBIA UN METODO EN UNA CLASE//**&#xa;EJEMPLO                   MM/eat()/perro/dormir() == dormir()/perro&#xa;&#xa;AM/&quot;METODO&quot;()/&quot;CLASE&quot;/&quot;Mensaje o Cuerpo&quot;&#xa;***//AGREGA CUERPO AL METODO&#xa;EJEMPLO                   AM/eat()/perro/&quot;int x,y, return x*y;&quot;&#xa;&#xa;NC/&quot;Nombre de la Clase&quot; ***//Crea el Constructor de una clase//***&#xa;NC/perro&#xa;&#xa;TT/&quot;Nombre de la Clase&quot; ***//Crea El to String de la CLase//***&#xa;&#xa;&#xa;BM/&quot;METODO&quot;().&quot;CLASE&quot; **+//BORRA EL METODO DE LA CLASE//***&#xa;&#xa;VC/&quot;nombre de la variable&quot;/clase&#xa;EJEMPLO  VC/INT_X/perro&#xa;&#xa;MC/&quot;clase original&quot;/&quot;Nuevo Nombre de la CLase&quot;////&quot;Cambia el nombre de la clase////&#xa;MA/&quot;nombre de la variable&quot;/&quot;Nombre de la clase&quot;/&quot;Nuevo Nombre del Atributo&quot; ///Cambia el nombre de la variable en la clase///&#xa;**"/>
                       </Properties>
                     </Component>
                   </SubComponents>

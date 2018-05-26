@@ -272,7 +272,7 @@ public class Principal extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         jTextArea1.setRows(5);
-        jTextArea1.setText("CC/\"NOMBRE DE LA CLASE\"\n***//CREA UNA CLASE//***\nEJEMPLO                   CC.perro \n\nCM/\"NOMBRE DEL METODO\"()/\"NOMBRE DE LA CLASE\"\n***//CREA UN METODO EN UNA CLASE//**\nEJEMPLO                  CM/eat()/perro\n\nCA/\"TIPO DE ATRIBUTO\"_\"NOMBRE DE LA VARIABLE\"/\"CLASE\"/\"METODO\"()\n***//CREA UN ATRIBUTO EN UN METODO//**\nEJEMPLO                   CM/int_x/perro.eat()\n\nMM/\"METODO\"()/\"CLASE\"/\"NUEVO NOMBRE DEL METODO\"\n***//CAMBIA UN METODO EN UNA CLASE//**\nEJEMPLO                   MM/eat()/perro/dormir() == dormir()/perro\n\nAM/\"METODO\"()/\"CLASE\"/\"Mensaje o Cuerpo\"\n***//AGREGA CUERPO AL METODO\nEJEMPLO                   AM/eat()/perro/\"int x,y, return x*y;\"\n\nNC/\"Nombre de la Clase\" ***//Crea el Constructor de una clase//***\nNC/perro\n\nTT/\"Nombre de la Clase\" ***//Crea El to String de la CLase//***\n\n\nBM/\"METODO\"().\"CLASE\" **+//BORRA EL METODO DE LA CLASE//***\n\nVC/\"nombre de la variable\"/clase\nEJEMPLO  VC/INT_X/perro\n\n\n");
+        jTextArea1.setText("CC/\"NOMBRE DE LA CLASE\"\n***//CREA UNA CLASE//***\nEJEMPLO                   CC.perro \n\nCM/\"NOMBRE DEL METODO\"()/\"NOMBRE DE LA CLASE\"\n***//CREA UN METODO EN UNA CLASE//**\nEJEMPLO                  CM/eat()/perro\n\nCA/\"TIPO DE ATRIBUTO\"_\"NOMBRE DE LA VARIABLE\"/\"CLASE\"/\"METODO\"()\n***//CREA UN ATRIBUTO EN UN METODO//**\nEJEMPLO                   CM/int_x/eat()/perro\n\nMM/\"METODO\"()/\"CLASE\"/\"NUEVO NOMBRE DEL METODO\"\n***//CAMBIA UN METODO EN UNA CLASE//**\nEJEMPLO                   MM/eat()/perro/dormir() == dormir()/perro\n\nAM/\"METODO\"()/\"CLASE\"/\"Mensaje o Cuerpo\"\n***//AGREGA CUERPO AL METODO\nEJEMPLO                   AM/eat()/perro/\"int x,y, return x*y;\"\n\nNC/\"Nombre de la Clase\" ***//Crea el Constructor de una clase//***\nNC/perro\n\nTT/\"Nombre de la Clase\" ***//Crea El to String de la CLase//***\n\n\nBM/\"METODO\"().\"CLASE\" **+//BORRA EL METODO DE LA CLASE//***\n\nVC/\"nombre de la variable\"/clase\nEJEMPLO  VC/INT_X/perro\n\nMC/\"clase original\"/\"Nuevo Nombre de la CLase\"////\"Cambia el nombre de la clase////\nMA/\"nombre de la variable\"/\"Nombre de la clase\"/\"Nuevo Nombre del Atributo\" ///Cambia el nombre de la variable en la clase///\n**");
         jScrollPane2.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -281,7 +281,7 @@ public class Principal extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(41, 41, 41)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -296,9 +296,9 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 402, Short.MAX_VALUE)
-                .addGap(22, 22, 22))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE)
+                .addGap(56, 56, 56))
         );
 
         jTabbedPane1.addTab("Ejecutar", jPanel3);
@@ -454,7 +454,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_Iniciar_SActionPerformed
 
     private void jToggleButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jToggleButton2MouseClicked
- 
+
     }//GEN-LAST:event_jToggleButton2MouseClicked
 
     private void jTabbedPane1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane1StateChanged
@@ -463,7 +463,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jTabbedPane1StateChanged
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-              String texto = t_area.getText();
+        String texto = t_area.getText();
         String[] partes = texto.split("/");
         System.out.println(partes[0]);
         try {
@@ -482,7 +482,6 @@ public class Principal extends javax.swing.JFrame {
                     if (us.get(ac).getClases().get(i).getNombre().equals(partes[3])) {
                         for (int j = 0; j < us.get(ac).getClases().get(i).getMetodos().size(); j++) {
                             if (us.get(ac).getClases().get(i).getMetodos().get(j).getM_nombre().equals(partes[2])) {
-                                System.out.println("SIMONNNNNNNNNN");
                                 us.get(ac).getClases().get(i).getMetodos().get(j).setAtributo1(partes[1]);
                             }
                             //  CM/int_x/eat()/perro
@@ -493,10 +492,13 @@ public class Principal extends javax.swing.JFrame {
             } else if (partes[0].equals("BM")) {
                 //"METODO"()/"CLASE
                 for (int i = 0; i < us.get(ac).getClases().size(); i++) {
-                    if (us.get(ac).getClases().get(i).getNombre().equals(partes[3])) {
+                    if (us.get(ac).getClases().get(i).getNombre().equals(partes[2])) {
                         for (int j = 0; j < us.get(ac).getClases().get(i).getMetodos().size(); j++) {
-                            if (us.get(ac).getClases().get(i).getMetodos().get(j).getM_nombre().equals(partes[2])) {
+                            System.out.println("TODO BIEN???????");
+                            if (us.get(ac).getClases().get(i).getMetodos().get(j).getM_nombre().equals(partes[1])) {
                                 us.get(ac).getClases().get(i).getMetodos().remove(j);
+                                System.out.println("SE BORRO");
+                                j=us.get(ac).getClases().get(i).getMetodos().size();
                             }
                             //  CM/int_x/eat()/perro
                         }
@@ -507,45 +509,88 @@ public class Principal extends javax.swing.JFrame {
                 for (int i = 0; i < us.get(ac).getClases().size(); i++) {
                     if (us.get(ac).getClases().get(i).getNombre().equals(partes[2])) {
                         us.get(ac).getClases().get(i).getAtri().add(new Atributos(partes[1]));
-                        System.out.println("ATRI YES");
                     }
                 }
 
-            } else if (partes[0].equals(" ")) {
+            } else if (partes[0].equals("NC")) {
+                for (int i = 0; i < us.get(ac).getClases().size(); i++) {
+                    if (us.get(ac).getClases().get(i).getNombre().equals(partes[1])) {
+                       String nom= us.get(ac).getClases().get(i).getNombre()+"()";
+                        us.get(ac).getClases().get(i).getMetodos().add(new Metodos(nom));
+                    }
+                }
+            } else if (partes[0].equals("TT")) {
+                  for (int i = 0; i < us.get(ac).getClases().size(); i++) {
+                    if (us.get(ac).getClases().get(i).getNombre().equals(partes[1])) {
+                       String nom="to String()";
+                        us.get(ac).getClases().get(i).getMetodos().add(new Metodos(nom));
+                    }
+                }
+            }else if (partes[0].equals("MM")) {
+                // MM/eat()/perro/dormir() == dormir()/perro
+                for (int i = 0; i < us.get(ac).getClases().size(); i++) {
+                    if (us.get(ac).getClases().get(i).getNombre().equals(partes[2])) {
+                        for (int j = 0; j < us.get(ac).getClases().get(i).getMetodos().size(); j++) {
+                            if (us.get(ac).getClases().get(i).getMetodos().get(j).getM_nombre().equals(partes[1])) {
+                                us.get(ac).getClases().get(i).getMetodos().get(j).setM_nombre(partes[3]);
+                            }
+                            
+                        }
+                    }
+                }
 
-            } else if (partes[0].equals(" ")) {
-
+            }else if (partes[0].equals("MC")) {
+                for (int i = 0; i < us.get(ac).getClases().size(); i++) {
+                    if (us.get(ac).getClases().get(i).getNombre().equals(partes[1])) {
+                        us.get(ac).getClases().get(i).setNombre(partes[2]);
+                    }
+                }
+            }else if (partes[0].equals("MC")) {
+               for (int i = 0; i < us.get(ac).getClases().size(); i++) {
+                    if (us.get(ac).getClases().get(i).getNombre().equals(partes[2])) {
+                        for(int j=0;j<us.get(ac).getClases().get(i).getAtri().size();j++){
+                            System.out.println();
+                            if (us.get(ac).getClases().get(i).getAtri().get(j).getNombre().equals(partes[1])){
+                                us.get(ac).getClases().get(i).getAtri().get(j).setNombre(partes[3]);
+                            }
+                                    //MA/"nombre de la variable"/"Nombre de la clase"/"Nuevo Nombre del Atributo"
+                        }
+                    }
+                } 
             }
         } catch (Exception e) {
             System.out.println("FATAL ERROR");
         }
+        //NC/"Nombre de la Clase" ***//Crea el Constructor de una clase//***
+        //NC/perro
+
+        //TT/"Nombre de la Clase" ***//Crea El to String de la CLase//***
+        //
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     private void actualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_actualizarMouseClicked
 
         j_table.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "CLASES", "VARIABLES", "METODOS", "VARIABLES"
-            }
+                new Object[][]{},
+                new String[]{
+                    "CLASES", "VARIABLES", "METODOS", "VARIABLES"
+                }
         ) {
-            boolean[] canEdit = new boolean [] {
+            boolean[] canEdit = new boolean[]{
                 false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
+                return canEdit[columnIndex];
             }
         });
-        
+
         DefaultTableModel modelo = (DefaultTableModel) j_table.getModel();
         for (int i = 0; i < us.get(ac).getClases().size(); i++) {
-          String variables="";
-          for(int j=0;j<us.get(ac).getClases().get(i).getMetodos().size();j++){
-              variables+=us.get(ac).getClases().get(i).getMetodos().get(j).getAtributo1();
-          }
+            String variables = "";
+            for (int j = 0; j < us.get(ac).getClases().get(i).getMetodos().size(); j++) {
+                variables += us.get(ac).getClases().get(i).getMetodos().get(j).getAtributo1();
+            }
             Object[] newrow = {
                 us.get(ac).getClases().get(i).getNombre(),
                 us.get(ac).getClases().get(i).getAtri(),
