@@ -549,7 +549,7 @@ public class Principal extends javax.swing.JFrame {
                for (int i = 0; i < us.get(ac).getClases().size(); i++) {
                     if (us.get(ac).getClases().get(i).getNombre().equals(partes[2])) {
                         for(int j=0;j<us.get(ac).getClases().get(i).getAtri().size();j++){
-                            System.out.println();
+                            System.out.println(us.get(ac).getClases().get(i).getAtri().get(j).getNombre());
                             if (us.get(ac).getClases().get(i).getAtri().get(j).getNombre().equals(partes[1])){
                                 us.get(ac).getClases().get(i).getAtri().get(j).setNombre(partes[3]);
                             }
